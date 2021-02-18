@@ -2,7 +2,7 @@
  (En desarrollo)
   servicio API vacunas, para consumir en aplicacion web o movil </br>
   Html</br>
-  css</>
+  css</br>
   Javascript </br>
   React</br>
   Express</br>
