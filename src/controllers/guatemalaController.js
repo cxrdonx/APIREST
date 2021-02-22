@@ -1,15 +1,19 @@
-const controller = {};
+'use strict'
 
-controller.list = (req, res) =>{
-    req.getConnection((err, conn) =>{
-        conn.query('SELECT * FROM pais', (err, guatemala) =>{
-            if(err){
-                res.json(err);
-            }
-            console.log(guatemala);
-            res.render('guatemala');
-        });
-    });
+var controller = {
+       
+      home: function(req, res){
+          return res.status(200).send({
+              message: "home"
+          });
+      },
+
+      test: function(req, res){
+          return res.status(200).send({
+              message:"test"
+          });
+      }
+
+
 };
-
 module.exports = controller;
