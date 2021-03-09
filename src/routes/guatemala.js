@@ -1,6 +1,12 @@
 const express = require('express');
-const router = express();
 const guatemalaController = require('../controllers/guatemalaController');
+const router = express();
 
-router.get('/guatemala', guatemalaController.list);
- module.exports = router
+
+
+router.post('/save', guatemalaController.save);
+router.get('/vaccines/:id?', guatemalaController.getVaccine);
+router.get('/allvaccines', guatemalaController.getVaccines);
+router.put('/vaccines/:id?', guatemalaController.updateVaccine);
+router.delete('/vaccines/:id?', guatemalaController.deleteVaccine);
+ module.exports = router 
