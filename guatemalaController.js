@@ -26,7 +26,7 @@ var controller = {
         getVaccine: function(req, res){
             var vaccineId = req.params.id;
       if(vaccineId == null) return res.status(400).send({message:'the ID does not exist'});
-            Vaccine.findById(vaccineId, (err, vaccine) =>{    //Vaccine es el modelo y se utiliza para realizar el findById()
+            Vaccine.findById(vaccineId, (err, vaccine) =>{    
                  if(err) return res.status(500).send({message: 'error returning data'});
                  if(!vaccine) return res.status(404).send({message:'does not exist'});
                  return res.status(200).send({
@@ -38,7 +38,7 @@ var controller = {
 
         //listar todos 
     getVaccines: function(req, res){
-             Vaccine.find({}).sort('date').exec((err, vaccine) =>{ //find({date: busca datos con esa variable}) -date ordenar mayor a menor
+             Vaccine.find({}).sort('date').exec((err, vaccine) =>{ 
                if(err) return res.status(500).send({message:"error returning data"});
                if(!vaccine) return res.status(404).send({message:'there is nothing to show'});
                return res.status(200).send({vaccine});
