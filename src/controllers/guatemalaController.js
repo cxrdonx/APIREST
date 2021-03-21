@@ -21,7 +21,7 @@ var controller = {
        
             });
         
-        },  //no olvidar lacoma
+        }, 
 
         getVaccine: function(req, res){
             var vaccineId = req.params.id;
@@ -36,7 +36,7 @@ var controller = {
             });
         },  
 
-        //listar todos 
+        
     getVaccines: function(req, res){
              Vaccine.find({}).sort('date').exec((err, vaccine) =>{ 
                if(err) return res.status(500).send({message:"error returning data"});
@@ -46,7 +46,7 @@ var controller = {
               });
      
     },
-   //update
+  
     updateVaccine: function(req, res){
             var vaccineId = req.params.id;
             var update = req.body;
@@ -57,7 +57,7 @@ var controller = {
             });
     },
 
-    //delete
+   
     deleteVaccine: function(req, res){
                 var vaccineId = req.params.id;
                 Vaccine.findByIdAndRemove(vaccineId, (err, vaccineRemoved) =>{
