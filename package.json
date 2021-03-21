@@ -10,8 +10,7 @@
     "express-myconnection": "^1.0.4",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
-    "nodemon": "^2.0.7",
-    "node": "^14.5.4"
+    "nodemon": "^2.0.7"
   },
   "devDependencies": {
     "ts-node": "^9.1.1",
